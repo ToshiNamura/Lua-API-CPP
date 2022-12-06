@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\lib">
+      <UniqueIdentifier>{c665811e-6c40-4907-ad12-02b5c7b6aa06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\c.files">
+      <UniqueIdentifier>{2a14cbaf-7bc7-4988-9290-8c051981c2c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\h.files">
+      <UniqueIdentifier>{0c163280-df0a-4159-9921-9c839e621617}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lua.Build\Includes\lauxlib.h">
+      <Filter>Файлы заголовков\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lua.Build\Includes\lua.h">
+      <Filter>Файлы заголовков\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lua.Build\Includes\luaconf.h">
+      <Filter>Файлы заголовков\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lua.Build\Includes\lualib.h">
+      <Filter>Файлы заголовков\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lapi.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lcode.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lctype.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\ldebug.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\ldo.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lfunc.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lgc.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\ljumptab.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\llex.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\llimits.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lmem.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lobject.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lopcodes.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lopnames.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lparser.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lprefix.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lstate.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lstring.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\ltable.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\ltm.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lundump.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lvm.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\lzio.h">
+      <Filter>Файлы заголовков\h.files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lua.Build\Includes\lua_inc.h">
+      <Filter>Файлы заголовков\lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lapi.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lauxlib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lbaselib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lcode.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lcorolib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lctype.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ldblib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ldebug.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ldo.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ldump.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lfunc.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lgc.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.linit.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.liolib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.llex.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lmathlib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lmem.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.loadlib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lobject.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lopcodes.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.loslib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lparser.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lstate.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lstring.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lstrlib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ltable.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ltablib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.ltm.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lundump.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lutf8lib.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lvm.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.lzio.cpp">
+      <Filter>Исходные файлы\c.files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

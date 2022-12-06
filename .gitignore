@@ -361,3 +361,28 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Lua.Build/Debug.64/Lua.exe
+/Lua.Build/Debug.64/Lua.Up.dll
+/Lua.Build/Debug.64/Lua.Up.exp
+/Lua.Build/Debug.64/Lua.Up.lib
+/Lua.Build/Debug.64/Luac.exe
+/Lua.Build/Debug.86/Lua.exe
+/Lua.Build/Debug.86/Lua.Up.dll
+/Lua.Build/Debug.86/Lua.Up.exp
+/Lua.Build/Debug.86/Lua.Up.lib
+/Lua.Build/Debug.86/Luac.exe
+/Lua.Build/Release.64/Lua.exe
+/Lua.Build/Release.64/Lua.Up.dll
+/Lua.Build/Release.64/Lua.Up.exp
+/Lua.Build/Release.64/Lua.Up.lib
+/Lua.Build/Release.64/Luac.exe
+/Lua.Build/Release.86/Lua.exe
+/Lua.Build/Release.86/Lua.Up.dll
+/Lua.Build/Release.86/Lua.Up.exp
+/Lua.Build/Release.86/Lua.Up.lib
+/Lua.Build/Release.86/Luac.exe
+/Lua.Debug/.bin/debug.32.exe
+/Lua.Debug/.bin/debug.64.exe
+/Lua.Debug/.bin/release.32.exe
+/Lua.Debug/.bin/release.64.exe
+/.gitattributes

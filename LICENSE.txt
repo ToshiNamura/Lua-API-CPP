@@ -1,6 +1,10 @@
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2022 Lua.Up : (Lua API CPP)
+
+[Using Soft License]:
+	Copyright © 1994–2021 Lua.org, PUC-Rio.
+	http://www.lua.org/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

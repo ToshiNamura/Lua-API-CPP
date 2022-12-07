@@ -17,4 +17,7 @@
 	"Lua.Compiler" is a Javac Compiler project that compiles the Lua language into binary files that the interpreter can run.
 	"Lua.Debug" is a Tester's project, just needed for testing.
 	"Lua.Source" - Lua Source code.
+	"Lua.Static" - Static Library.
 	"Lua.Up" Is A Dynamically Connected Library Project.
+
+	After adding "Lua.Static", the projects : "Lua.Api", "Lua.Debug" and "Lua.Compiler" no longer depend on the dll.

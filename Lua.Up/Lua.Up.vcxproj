@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>Lua.Up</TargetName>
+    <TargetName>LuaUp</TargetName>
     <OutDir>$(SolutionDir)Lua.Build\Debug.86\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>Lua.Up</TargetName>
+    <TargetName>LuaUp</TargetName>
     <OutDir>$(SolutionDir)Lua.Build\Release.86\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>Lua.Up</TargetName>
+    <TargetName>LuaUp</TargetName>
     <OutDir>$(SolutionDir)Lua.Build\Debug.64\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>Lua.Up</TargetName>
+    <TargetName>LuaUp</TargetName>
     <OutDir>$(SolutionDir)Lua.Build\Release.64\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

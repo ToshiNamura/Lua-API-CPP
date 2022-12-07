@@ -100,7 +100,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Lua.Up.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Debug.86\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -122,7 +122,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Lua.Up.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Release.86\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -140,7 +140,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Lua.Up.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Debug.64\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -162,44 +162,17 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Lua.Up.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Release.64\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Lua.Up\c.lapi.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lauxlib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lbaselib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lcode.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lcorolib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lctype.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ldblib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ldebug.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ldo.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ldump.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lfunc.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lgc.cpp" />
-    <ClCompile Include="..\Lua.Up\c.linit.cpp" />
-    <ClCompile Include="..\Lua.Up\c.liolib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.llex.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lmathlib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lmem.cpp" />
-    <ClCompile Include="..\Lua.Up\c.loadlib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lobject.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lopcodes.cpp" />
-    <ClCompile Include="..\Lua.Up\c.loslib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lparser.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lstate.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lstring.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lstrlib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ltable.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ltablib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.ltm.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lundump.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lutf8lib.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lvm.cpp" />
-    <ClCompile Include="..\Lua.Up\c.lzio.cpp" />
     <ClCompile Include="c.luac.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lua.Static\Lua.Static.vcxproj">
+      <Project>{7b3224f9-7003-4997-8aef-a02eb1c093d1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

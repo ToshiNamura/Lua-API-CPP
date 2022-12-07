@@ -21,32 +21,32 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5040d138-c623-41f0-a3c6-7eb587436381}</ProjectGuid>
-    <RootNamespace>LuaDebug</RootNamespace>
+    <ProjectGuid>{7b3224f9-7003-4997-8aef-a02eb1c093d1}</ProjectGuid>
+    <RootNamespace>LuaStatic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,37 +71,36 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir).bin\</OutDir>
-    <TargetName>debug.32</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir).bin\</OutDir>
-    <TargetName>debug.64</TargetName>
+    <TargetName>LuaStatic</TargetName>
+    <OutDir>$(SolutionDir)Lua.Build\Debug.86\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir).bin\</OutDir>
-    <TargetName>release.32</TargetName>
+    <TargetName>LuaStatic</TargetName>
+    <OutDir>$(SolutionDir)Lua.Build\Release.86\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>LuaStatic</TargetName>
+    <OutDir>$(SolutionDir)Lua.Build\Debug.64\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir).bin\</OutDir>
-    <TargetName>release.64</TargetName>
+    <TargetName>LuaStatic</TargetName>
+    <OutDir>$(SolutionDir)Lua.Build\Release.64\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)Lua.Build\Includes\;$(SolutionDir)Lua.Up\h\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Debug.86\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,38 +109,36 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)Lua.Build\Includes\;$(SolutionDir)Lua.Up\h\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Release.86\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)Lua.Build\Includes\;$(SolutionDir)Lua.Up\h\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Debug.64\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,34 +147,63 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(SolutionDir)Lua.Build\Includes\;$(SolutionDir)Lua.Up\h\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>LuaStatic.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Lua.Build\Release.64\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Process.cpp" />
+    <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
-    <ClInclude Include="Process.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Lua.Static\Lua.Static.vcxproj">
-      <Project>{7b3224f9-7003-4997-8aef-a02eb1c093d1}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\Lua.Up\c.lapi.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lauxlib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lbaselib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lcode.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lcorolib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lctype.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ldblib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ldebug.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ldo.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ldump.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lfunc.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lgc.cpp" />
+    <ClCompile Include="..\Lua.Up\c.linit.cpp" />
+    <ClCompile Include="..\Lua.Up\c.liolib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.llex.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lmathlib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lmem.cpp" />
+    <ClCompile Include="..\Lua.Up\c.loadlib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lobject.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lopcodes.cpp" />
+    <ClCompile Include="..\Lua.Up\c.loslib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lparser.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lstate.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lstring.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lstrlib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ltable.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ltablib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.ltm.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lundump.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lutf8lib.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lvm.cpp" />
+    <ClCompile Include="..\Lua.Up\c.lzio.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
